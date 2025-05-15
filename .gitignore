@@ -1,0 +1,21 @@
+Library/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Logs/
+[Mm]emoryCaptures/
+[Mm]emoryCaptures/
+Assembly-CSharp.csproj
+*.unityproj
+shooter.sln shooterr.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+.vscode/
+.DS_Store
+Thumbs.db
