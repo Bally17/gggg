@@ -11,6 +11,6 @@ public class EnemyBulletController : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 5f); // Zničenie po čase
+        Destroy(gameObject, 5f);
     }
 }

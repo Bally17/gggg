@@ -101,7 +101,6 @@ public class EnemySpawner : MonoBehaviour
         if (wavePanel != null)
             wavePanel.SetActive(false);
 
-        // Zvýš vlna a priprav parametre
         currentWave++;
         maxEnemiesThisWave = 10 + (currentWave - 1) * 2;
         maxConcurrentEnemies = Mathf.Min(10, 5 + (currentWave - 1));

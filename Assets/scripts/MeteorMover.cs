@@ -4,7 +4,7 @@ public class MeteorMover : MonoBehaviour
 {
     private Vector2 moveDirection;
     private float moveSpeed;
-    public float rotationSpeed = 180f; // stupňov za sekundu
+    public float rotationSpeed = 180f;
 
     public void SetMovement(Vector2 direction, float speed)
     {
@@ -14,13 +14,10 @@ public class MeteorMover : MonoBehaviour
 
     void Update()
     {
-        // Posun meteoru
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
-        // Rotácia okolo vlastného stredu
         transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
 
-        // Automatické zničenie mimo obrazovky
         if (transform.position.x < -20 || transform.position.x > 20 || transform.position.y < -20 || transform.position.y > 20)
         {
             Destroy(gameObject);

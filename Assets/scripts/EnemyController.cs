@@ -21,7 +21,6 @@ public class EnemyController : MonoBehaviour
         moveDirection = Random.value > 0.5f ? 1 : -1;
         UpdateVisualDirection();
 
-        // Spusti náhodnú streľbu
         Invoke("Shoot", Random.Range(minFireInterval, maxFireInterval));
     }
 

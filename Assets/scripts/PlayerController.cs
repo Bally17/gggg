@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
-            // Správne prehratie zvuku
             AudioSource.PlayClipAtPoint(fireSound, transform.position);
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -69,7 +68,6 @@ public class PlayerController : MonoBehaviour
             } else {
                 Time.timeScale = 0f;
 
-                // Zobrazenie panelu
                 if (gameOverPanel != null)
                     gameOverPanel.SetActive(true);
             }
@@ -78,8 +76,8 @@ public class PlayerController : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1f; // reset časovania
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // načíta znova aktuálnu scénu
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private IEnumerator ShakeEffect(float duration, float magnitude)
